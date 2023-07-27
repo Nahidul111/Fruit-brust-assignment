@@ -11,7 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-
+    <!-- tailwind style  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+              'shop-btn': '#F85559'
+            }
+          }
+        }
+      }
+    </script>
     <style>
         .manrope-font{
             font-family: 'Manrope', sans-serif;
@@ -55,14 +67,14 @@
               </div>
         </nav>
         <!-- slider section  -->
-        <section class="my-20">
+        <section class="relative my-20 ">
             <div class="carousel w-full">
                 <div id="slide1" class="carousel-item relative w-full">
                     <div class="hero min-h-screen " style="background-image: url(./images/banner1.png);">
                         <div class="hero-overlay bg-opacity-60"></div>
                         <div class="hero-content text-center text-neutral-content">
                           <div class="max-w-2xl">
-                            <h1 class="mb-5 text-6xl font-extrabold">Exotic tastes at your doorstep</h1>
+                            <h1 class="mb-5 text-3xl md:text-5xl font-extrabold">Exotic tastes at your doorstep</h1>
                             <p class="mb-5">We supply highly quality organic products</p>
                             <button class="btn bg-[#F85559] border-none">Shop Now</button>
                           </div>
@@ -79,7 +91,7 @@
                         <div class="hero-overlay bg-opacity-60"></div>
                         <div class="hero-content text-center text-neutral-content">
                           <div class="max-w-2xl">
-                            <h1 class="mb-5 text-6xl font-extrabold">Exotic tastes at your doorstep</h1>
+                            <h1 class="mb-5 text-3xl md:text-5xl font-extrabold">Exotic tastes at your doorstep</h1>
                             <p class="mb-5">We supply highly quality organic products</p>
                             <button class="btn bg-[#F85559] border-none">Shop Now</button>
                           </div>
@@ -96,7 +108,7 @@
                         <div class="hero-overlay bg-opacity-60"></div>
                         <div class="hero-content text-center text-neutral-content">
                           <div class="max-w-2xl">
-                            <h1 class="mb-5 text-6xl font-extrabold">Exotic tastes at your doorstep</h1>
+                            <h1 class="mb-5 text-3xl md:text-5xl font-extrabold">Exotic tastes at your doorstep</h1>
                             <p class="mb-5">We supply highly quality organic products</p>
                             <button class="btn bg-[#F85559] border-none">Shop Now</button>
                           </div>
@@ -112,8 +124,8 @@
                     <div class="hero " style="background-image: url(./images/banner4.png);">
                         <div class="hero-overlay bg-opacity-60"></div>
                         <div class="hero-content text-center text-neutral-content">
-                          <div class="max-w-2xl">
-                            <h1 class="mb-5 text-6xl font-extrabold">Exotic tastes at your doorstep</h1>
+                          <div class="max-w-3xl">
+                            <h1 class="mb-5 text-3xl md:text-5xl font-extrabold">Exotic tastes at your doorstep</h1>
                             <p class="mb-5">We supply highly quality organic products</p>
                             <button class="btn bg-[#F85559] border-none">Shop Now</button>
                           </div>
@@ -125,12 +137,37 @@
                   </div>
                 </div>
             </div>
+          <!-- slider card  -->
+            <div class="max-w-4xl absolute  -mt-20 ml-44">
+            <div class="flex justify-between items-center px-16 gap-20 bg-base-100 rounded-xl shadow-xl">
+              <div class="py-10">
+                <img src="./images/fruit1.png" alt="">
+                <h4>Strawberry</h4>
+              </div>
+              <div class="py-10">
+                <img src="./images/fruit2.png" alt="">
+                <h4>Orange</h4>
+              </div>
+              <div class="py-10">
+                <img src="./images/fruit3.png" alt="">
+                <h4>Mango</h4>
+              </div>
+              <div class="py-10">
+                <img src="./images/fruit4.png" alt="">
+                <h4>Strawberry</h4>
+              </div>
+              <div>
+                <img src="./images/fruit5.png" alt="">
+                <h4>Strawberry</h4>
+              </div>
+            </div>
+            </div>
         </section>
     </header>
     <main class="my-20">
         <!-- deal of the day section  -->
-        <section>
-            <div class="flex justify-between items-center">
+        <section class="mt-40">
+            <div class="flex flex-col gap-6 md:flex-row justify-between  items-center">
                 <div>
                     <h3 class="text-5xl font-extrabold mb-6">Deal of the day</h3>
                     <p class="text-base font-medium">Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.</p>
@@ -172,9 +209,9 @@
                 </div>
             </div>
             <!-- card section  -->
-            <div class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            <div class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-10">
                 <!-- 1st card that -->
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card bg-base-100 border">
                     <figure class="px-10 pt-10">
                       <img src="./images/fruit6.png" alt="Fruit" class="rounded-xl" />
                     </figure>
@@ -196,7 +233,7 @@
                       </div>
                       <div>
                         <!-- Open the modal using ID.showModal() method -->
-                        <button class="btn" onclick="my_modal_5.showModal()">Details</button>
+                        <button class="btn text-[#F85559] text-lg font-bold" onclick="my_modal_5.showModal()">Details</button>
                         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                             <form method="dialog" class="modal-box">
                                 <div class="card w-96 bg-base-100 ">
@@ -222,7 +259,7 @@
                     </div>
                 </div>
                 <!-- 2nd card is this -->
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card bg-base-100 border">
                     <figure class="px-10 pt-10">
                       <img src="./images/fruit7.png" alt="Fruit" class="rounded-xl" />
                     </figure>
@@ -270,7 +307,7 @@
                     </div>
                 </div>
                 <!-- 3rd card now  -->
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card  bg-base-100  border">
                     <figure class="px-10 pt-10">
                       <img src="./images/fruit8.png" alt="Fruit" class="rounded-xl" />
                     </figure>
@@ -318,7 +355,7 @@
                     </div>
                 </div>
                 <!-- 4th card here  -->
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card bg-base-100 border">
                     <figure class="px-10 pt-10">
                       <img src="./images/fruit9.png" alt="Fruit" class="rounded-xl" />
                     </figure>
@@ -367,7 +404,114 @@
                 </div>
             </div>
         </section>
+        <div class="text-center text-lg font-extrabold my-12">
+          <button class="btn bg-[#F85559] border-none text-white">Shop All</button>
+        </div>
+        <!-- Meet the team section  -->
+        <section>
+          <div>
+            <div class="hero min-h-screen" style="background-image: url(./images/team.png);">
+              <div class="hero-overlay bg-opacity-60"></div>
+              <div class="hero-content text-center text-neutral-content">
+                <div>
+                  <h1 class="mb-5 text-5xl font-bold">Meet the team section</h1>
+                  <p class="mb-5">Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.</p> 
+                  <div class="grid items-center gap-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                    <!-- 1st team member -->
+                    <div class="card ">
+                      <figure class="px-10 pt-10">
+                        <img src="./images/member1.png" alt="team" class="rounded-full" />
+                      </figure>
+                      <div class="card-body items-center text-center">
+                        <h2 class="card-title">Awlad Hossain</h2>
+                        <p class="text-gray-300">Fruits Expert</p>
+                        <div class="flex flex-row space-x-3">
+                          <img src="./icons/facebook 1 (1).svg" alt="">
+                          <img src="./icons/twitter (1) 1.svg" alt="">
+                          <img src="./icons/linkedin 1 (1).svg" alt="">
+                        </div>  
+                      </div>
+                    </div>
+                    <!-- 2nd team member -->
+                    <div class="card ">
+                      <figure class="px-10 pt-10">
+                        <img src="./images/member2.png" alt="team" class="rounded-full" />
+                      </figure>
+                      <div class="card-body items-center text-center">
+                        <h2 class="card-title">Awlad Hossain</h2>
+                        <p class="text-gray-300">Fruits Expert</p>
+                        <div class="flex flex-row space-x-3">
+                          <img src="./icons/facebook 1 (1).svg" alt="">
+                          <img src="./icons/twitter (1) 1.svg" alt="">
+                          <img src="./icons/linkedin 1 (1).svg" alt="">
+                        </div>  
+                      </div>
+                    </div>
+                    <!-- 3rd team member -->
+                    <div class="card ">
+                      <figure class="px-10 pt-10">
+                        <img src="./images/member3.png" alt="team" class="rounded-full" />
+                      </figure>
+                      <div class="card-body items-center text-center">
+                        <h2 class="card-title">Awlad Hossain</h2>
+                        <p class="text-gray-300">Fruits Expert</p>
+                        <div class="flex flex-row space-x-3">
+                          <img src="./icons/facebook 1 (1).svg" alt="">
+                          <img src="./icons/twitter (1) 1.svg" alt="">
+                          <img src="./icons/linkedin 1 (1).svg" alt="">
+                        </div>  
+                      </div>
+                    </div>
+                    <!-- 4th team member -->
+                    <div class="card ">
+                      <figure class="px-10 pt-10">
+                        <img src="./images/member4.png" alt="team" class="rounded-full" />
+                      </figure>
+                      <div class="card-body items-center text-center">
+                        <h2 class="card-title">Awlad Hossain</h2>
+                        <p class="text-gray-300">Fruits Expert</p>
+                        <div class="flex flex-row space-x-3">
+                          <img src="./icons/facebook 1 (1).svg" alt="">
+                          <img src="./icons/twitter (1) 1.svg" alt="">
+                          <img src="./icons/linkedin 1 (1).svg" alt="">
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </div>  
+              </div>
+            </div>
+          </div>
+        </section>
     </main>
+    <!-- footer section is this -->
+    <footer class="footer footer-center text-white p-10 bg-[#121212] text-base-content rounded">
+      <div class="flex flex-row gap-4">
+        <img src="./images/logo.png" alt="">
+        <h3 class="text-2xl md:text-4xl font-bold text-white">Fruit Burst</h3>
+      </div>
+      <div class="grid grid-cols-4 md:grid-cols-6">
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">About us</a> 
+        <a class="link link-hover">Shop</a> 
+        <a class="link link-hover">All Fruits</a> 
+        <a class="link link-hover">Support</a>
+        <a class="link link-hover">My Account</a>
+      </div> 
+      <div>
+        <div class="grid grid-flow-col gap-4">
+          <a><img src="./icons/twitter 1 (2).svg" alt=""></a>
+          <a><img src="./icons/facebook 1 (2).svg" alt=""></a> 
+          <a><img src="./icons/linkedin 1 (2).svg" alt=""></a>
+          <a><img src="./icons/Group 49 (1).svg" alt=""></a> 
+          <a><img src="./icons/instagram 1 (1).svg" alt=""></a>
+          <a><img src="./icons/apple 1 (1).svg" alt=""></a> 
+        </div>
+      </div> 
+      <div>
+        <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+      </div>
+    </footer>
 
 </body>
 </html>
